@@ -1,0 +1,3597 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="API documentation for Magic Meal Kits">
+      
+      
+        <meta name="author" content="푸르공">
+      
+      
+        <link rel="canonical" href="https://docs.magicmealkits.com/api/naver-commerce/">
+      
+      
+        <link rel="prev" href="../proxy/">
+      
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.1">
+    
+    
+      
+        <title>Naver Commerce API - Magic Meal Kits API Documentation</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="black" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#naver-commerce-smartstore-api" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Magic Meal Kits API Documentation" class="md-header__button md-logo" aria-label="Magic Meal Kits API Documentation" data-md-component="logo">
+      
+  <img src="../../assets/images/logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Magic Meal Kits API Documentation
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Naver Commerce API
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../" class="md-tabs__link">
+          
+  
+  
+  API Reference
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../mcp/overview.md" class="md-tabs__link">
+          
+  
+  
+  MCP Server
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="https://make.magicmealkits.com/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Magic Meal Kits
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Magic Meal Kits API Documentation" class="md-nav__button md-logo" aria-label="Magic Meal Kits API Documentation" data-md-component="logo">
+      
+  <img src="../../assets/images/logo.png" alt="logo">
+
+    </a>
+    Magic Meal Kits API Documentation
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    API Reference
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    API Reference
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Overview
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../pdf/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    PDF API
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../javascript/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    JavaScript API
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../youtube/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    YouTube API
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../notion/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Notion API
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../notion-bulk-operations/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Notion Bulk Operations API
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../slack/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Slack API
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../proxy/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Proxy Image API
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Naver Commerce API
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Naver Commerce API
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#table-of-contents" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Table of Contents
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Overview
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Overview">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#prerequisites" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Prerequisites
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#authentication" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Authentication
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Authentication">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-magic-meal-kits-api-key" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Magic Meal Kits API Key
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-naver-commerce-credentials" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Naver Commerce Credentials
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#authentication-flow" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Authentication Flow
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#base-url" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Base URL
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#endpoints" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Endpoints
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Endpoints">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#get-oauth-token" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Get OAuth Token
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Get OAuth Token">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#endpoint" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Endpoint
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#request-headers" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Request Headers
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#query-parameters" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Query Parameters
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-request" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Example Request
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#success-response" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Success Response
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#response-fields" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Response Fields
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#error-responses" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Error Responses
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#get-seller-account" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Get Seller Account
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Get Seller Account">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#endpoint_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Endpoint
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#request-headers_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Request Headers
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-request_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Example Request
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#success-response_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Success Response
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#response-fields_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Response Fields
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#error-responses_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Error Responses
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#get-product-brands" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Get Product Brands
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Get Product Brands">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#endpoint_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Endpoint
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#request-headers_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Request Headers
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#query-parameters_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Query Parameters
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-request_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Example Request
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#success-response_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Success Response
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#response-fields_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Response Fields
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#edge-cases" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Edge Cases
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#get-orders" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Get Orders
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Get Orders">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#endpoint_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Endpoint
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#request-headers_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Request Headers
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#query-parameters_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Query Parameters
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#status-values" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Status Values
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#range-type-values" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Range Type Values
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-requests" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Example Requests
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#success-response_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Success Response
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#response-fields_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Response Fields
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#error-responses_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Error Responses
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#edge-cases_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Edge Cases
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#data-types" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Data Types
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Data Types">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#order-status-flow" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Order Status Flow
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#claim-status-types" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Claim Status Types
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#error-handling" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Error Handling
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Error Handling">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#http-status-codes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        HTTP Status Codes
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#error-response-format" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Error Response Format
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#common-errors" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Common Errors
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#rate-limiting" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Rate Limiting
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Rate Limiting">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#naver-commerce-api-limits" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Naver Commerce API Limits
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#best-practices" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Best Practices
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ip-registration" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        IP Registration
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="IP Registration">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#requirement" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Requirement
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#registration-path" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Registration Path
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cloud-deployment-note" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Cloud Deployment Note
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mcp-integration" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        MCP Integration
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="MCP Integration">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#available-tools" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Available Tools
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#usage" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Usage
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mcp-tool-parameters" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        MCP Tool Parameters
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="MCP Tool Parameters">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#naver_get_orders" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        naver_get_orders
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#naver_get_account" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        naver_get_account
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#naver_get_brands" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        naver_get_brands
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#references" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        References
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#changelog" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Changelog
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    MCP Server
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    MCP Server
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../mcp/overview.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Overview
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../mcp/claude-ai-setup.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Claude.ai Setup
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../mcp/claude-code-setup.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Claude Code Setup
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://make.magicmealkits.com/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Magic Meal Kits
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#table-of-contents" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Table of Contents
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Overview
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Overview">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#prerequisites" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Prerequisites
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#authentication" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Authentication
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Authentication">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-magic-meal-kits-api-key" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Magic Meal Kits API Key
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-naver-commerce-credentials" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Naver Commerce Credentials
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#authentication-flow" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Authentication Flow
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#base-url" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Base URL
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#endpoints" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Endpoints
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Endpoints">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#get-oauth-token" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Get OAuth Token
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Get OAuth Token">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#endpoint" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Endpoint
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#request-headers" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Request Headers
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#query-parameters" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Query Parameters
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-request" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Example Request
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#success-response" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Success Response
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#response-fields" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Response Fields
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#error-responses" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Error Responses
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#get-seller-account" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Get Seller Account
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Get Seller Account">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#endpoint_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Endpoint
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#request-headers_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Request Headers
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-request_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Example Request
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#success-response_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Success Response
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#response-fields_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Response Fields
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#error-responses_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Error Responses
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#get-product-brands" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Get Product Brands
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Get Product Brands">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#endpoint_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Endpoint
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#request-headers_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Request Headers
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#query-parameters_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Query Parameters
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-request_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Example Request
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#success-response_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Success Response
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#response-fields_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Response Fields
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#edge-cases" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Edge Cases
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#get-orders" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Get Orders
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Get Orders">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#endpoint_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Endpoint
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#request-headers_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Request Headers
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#query-parameters_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Query Parameters
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#status-values" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Status Values
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#range-type-values" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Range Type Values
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-requests" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Example Requests
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#success-response_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Success Response
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#response-fields_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Response Fields
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#error-responses_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Error Responses
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#edge-cases_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Edge Cases
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#data-types" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Data Types
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Data Types">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#order-status-flow" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Order Status Flow
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#claim-status-types" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Claim Status Types
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#error-handling" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Error Handling
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Error Handling">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#http-status-codes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        HTTP Status Codes
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#error-response-format" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Error Response Format
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#common-errors" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Common Errors
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#rate-limiting" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Rate Limiting
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Rate Limiting">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#naver-commerce-api-limits" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Naver Commerce API Limits
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#best-practices" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Best Practices
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ip-registration" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        IP Registration
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="IP Registration">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#requirement" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Requirement
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#registration-path" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Registration Path
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cloud-deployment-note" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Cloud Deployment Note
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mcp-integration" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        MCP Integration
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="MCP Integration">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#available-tools" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Available Tools
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#usage" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Usage
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mcp-tool-parameters" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        MCP Tool Parameters
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="MCP Tool Parameters">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#naver_get_orders" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        naver_get_orders
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#naver_get_account" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        naver_get_account
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#naver_get_brands" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        naver_get_brands
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#references" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        References
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#changelog" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Changelog
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="naver-commerce-smartstore-api">Naver Commerce (Smartstore) API<a class="headerlink" href="#naver-commerce-smartstore-api" title="Permanent link">&para;</a></h1>
+<p>Complete API documentation for Naver Commerce (스마트스토어) integration.</p>
+<hr />
+<h2 id="table-of-contents">Table of Contents<a class="headerlink" href="#table-of-contents" title="Permanent link">&para;</a></h2>
+<ol>
+<li><a href="#overview">Overview</a></li>
+<li><a href="#authentication">Authentication</a></li>
+<li><a href="#base-url">Base URL</a></li>
+<li><a href="#endpoints">Endpoints</a></li>
+<li><a href="#get-oauth-token">Get OAuth Token</a></li>
+<li><a href="#get-seller-account">Get Seller Account</a></li>
+<li><a href="#get-product-brands">Get Product Brands</a></li>
+<li><a href="#get-orders">Get Orders</a></li>
+<li><a href="#data-types">Data Types</a></li>
+<li><a href="#error-handling">Error Handling</a></li>
+<li><a href="#rate-limiting">Rate Limiting</a></li>
+<li><a href="#ip-registration">IP Registration</a></li>
+<li><a href="#mcp-integration">MCP Integration</a></li>
+</ol>
+<hr />
+<h2 id="overview">Overview<a class="headerlink" href="#overview" title="Permanent link">&para;</a></h2>
+<p>The Naver Commerce API provides endpoints for Smartstore sellers to:</p>
+<ul>
+<li>Authenticate with Naver Commerce platform</li>
+<li>Retrieve seller account information</li>
+<li>Search product brands</li>
+<li>Query and filter orders</li>
+</ul>
+<h3 id="prerequisites">Prerequisites<a class="headerlink" href="#prerequisites" title="Permanent link">&para;</a></h3>
+<ol>
+<li><strong>Naver Commerce Account</strong>: Register at <a href="https://apicenter.commerce.naver.com/">Naver Commerce API Center</a></li>
+<li><strong>Application Credentials</strong>: Obtain <code>client_id</code> and <code>client_secret</code></li>
+<li><strong>Magic Meal Kits API Key</strong>: Required for all API calls</li>
+<li><strong>IP Registration</strong>: Register your server IP at Naver Commerce API Center</li>
+</ol>
+<hr />
+<h2 id="authentication">Authentication<a class="headerlink" href="#authentication" title="Permanent link">&para;</a></h2>
+<p>All endpoints require two levels of authentication:</p>
+<h3 id="1-magic-meal-kits-api-key">1. Magic Meal Kits API Key<a class="headerlink" href="#1-magic-meal-kits-api-key" title="Permanent link">&para;</a></h3>
+<p>Required for all requests:</p>
+<div class="highlight"><pre><span></span><code>X-API-KEY: your-magic-meal-kits-api-key
+</code></pre></div>
+<h3 id="2-naver-commerce-credentials">2. Naver Commerce Credentials<a class="headerlink" href="#2-naver-commerce-credentials" title="Permanent link">&para;</a></h3>
+<p><strong>Option A: Headers (Recommended)</strong></p>
+<div class="highlight"><pre><span></span><code>X-Naver-Client-ID: your-naver-client-id
+X-Naver-Client-Secret: your-naver-client-secret
+</code></pre></div>
+<p><strong>Option B: Query Parameters (Backward Compatible)</strong></p>
+<div class="highlight"><pre><span></span><code>?client_id=your-naver-client-id&amp;client_secret=your-naver-client-secret
+</code></pre></div>
+<blockquote>
+<p><strong>Security Note</strong>: Headers are recommended as credentials won't appear in server logs, browser history, or proxy logs.</p>
+</blockquote>
+<h3 id="authentication-flow">Authentication Flow<a class="headerlink" href="#authentication-flow" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code>┌─────────────────┐     ┌──────────────────┐     ┌─────────────────┐
+│  Your Client    │────▶│  Magic Meal Kits │────▶│  Naver Commerce │
+│                 │     │      API         │     │      API        │
+└─────────────────┘     └──────────────────┘     └─────────────────┘
+        │                       │                        │
+        │  X-API-KEY            │  OAuth Token           │
+        │  X-Naver-Client-ID    │  (auto-generated)      │
+        │  X-Naver-Client-Secret│                        │
+        └───────────────────────┴────────────────────────┘
+</code></pre></div>
+<hr />
+<h2 id="base-url">Base URL<a class="headerlink" href="#base-url" title="Permanent link">&para;</a></h2>
+<div class="highlight"><pre><span></span><code>https://magic-meal-kits-xxxxx.run.app/api/v1
+</code></pre></div>
+<p>Replace <code>xxxxx</code> with your deployment identifier.</p>
+<hr />
+<h2 id="endpoints">Endpoints<a class="headerlink" href="#endpoints" title="Permanent link">&para;</a></h2>
+<h3 id="get-oauth-token">Get OAuth Token<a class="headerlink" href="#get-oauth-token" title="Permanent link">&para;</a></h3>
+<p>Retrieves an OAuth2 access token from Naver Commerce API.</p>
+<h4 id="endpoint">Endpoint<a class="headerlink" href="#endpoint" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code>POST /api/v1/naver/token
+</code></pre></div>
+<h4 id="request-headers">Request Headers<a class="headerlink" href="#request-headers" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Header</th>
+<th>Required</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>X-API-KEY</code></td>
+<td>Yes</td>
+<td>Magic Meal Kits API key</td>
+</tr>
+<tr>
+<td><code>X-Naver-Client-ID</code></td>
+<td>Yes*</td>
+<td>Naver Commerce client ID</td>
+</tr>
+<tr>
+<td><code>X-Naver-Client-Secret</code></td>
+<td>Yes*</td>
+<td>Naver Commerce client secret</td>
+</tr>
+</tbody>
+</table>
+<p>*Can also be provided as query parameters</p>
+<h4 id="query-parameters">Query Parameters<a class="headerlink" href="#query-parameters" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Required</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>client_id</code></td>
+<td>String</td>
+<td>No*</td>
+<td>Naver Commerce client ID (if not in header)</td>
+</tr>
+<tr>
+<td><code>client_secret</code></td>
+<td>String</td>
+<td>No*</td>
+<td>Naver Commerce client secret (if not in header)</td>
+</tr>
+<tr>
+<td><code>account_id</code></td>
+<td>String</td>
+<td>No</td>
+<td>Account ID for SELLER type token</td>
+</tr>
+</tbody>
+</table>
+<h4 id="example-request">Example Request<a class="headerlink" href="#example-request" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code>curl<span class="w"> </span>-X<span class="w"> </span>POST<span class="w"> </span><span class="s2">&quot;https://magic-meal-kits-xxxxx.run.app/api/v1/naver/token&quot;</span><span class="w"> </span><span class="se">\</span>
+<span class="w">     </span>-H<span class="w"> </span><span class="s2">&quot;X-API-KEY: your-api-key&quot;</span><span class="w"> </span><span class="se">\</span>
+<span class="w">     </span>-H<span class="w"> </span><span class="s2">&quot;X-Naver-Client-ID: 2z1WKQ8ely9OmnreuuYQu8&quot;</span><span class="w"> </span><span class="se">\</span>
+<span class="w">     </span>-H<span class="w"> </span><span class="s2">&quot;X-Naver-Client-Secret: \$2a\$04\$shb8Z637r8uWTPhLi9/pr.&quot;</span>
+</code></pre></div>
+<h4 id="success-response">Success Response<a class="headerlink" href="#success-response" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;token&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nt">&quot;access_token&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;AAA.eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;expires_in&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">3600</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;token_type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Bearer&quot;</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+<h4 id="response-fields">Response Fields<a class="headerlink" href="#response-fields" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>token.access_token</code></td>
+<td>String</td>
+<td>OAuth2 access token</td>
+</tr>
+<tr>
+<td><code>token.expires_in</code></td>
+<td>Integer</td>
+<td>Token validity in seconds (typically 3600)</td>
+</tr>
+<tr>
+<td><code>token.token_type</code></td>
+<td>String</td>
+<td>Token type (always "Bearer")</td>
+</tr>
+</tbody>
+</table>
+<h4 id="error-responses">Error Responses<a class="headerlink" href="#error-responses" title="Permanent link">&para;</a></h4>
+<p><strong>Missing Credentials (400)</strong>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;error&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;client_id and client_secret are required&quot;</span>
+<span class="p">}</span>
+</code></pre></div></p>
+<p><strong>Invalid Credentials (500)</strong>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;error&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;API request failed with status 401: {\&quot;error\&quot;:\&quot;invalid_client\&quot;}&quot;</span>
+<span class="p">}</span>
+</code></pre></div></p>
+<hr />
+<h3 id="get-seller-account">Get Seller Account<a class="headerlink" href="#get-seller-account" title="Permanent link">&para;</a></h3>
+<p>Retrieves seller account information to identify the store.</p>
+<h4 id="endpoint_1">Endpoint<a class="headerlink" href="#endpoint_1" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code>GET /api/v1/naver/account
+</code></pre></div>
+<h4 id="request-headers_1">Request Headers<a class="headerlink" href="#request-headers_1" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Header</th>
+<th>Required</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>X-API-KEY</code></td>
+<td>Yes</td>
+<td>Magic Meal Kits API key</td>
+</tr>
+<tr>
+<td><code>X-Naver-Client-ID</code></td>
+<td>Yes*</td>
+<td>Naver Commerce client ID</td>
+</tr>
+<tr>
+<td><code>X-Naver-Client-Secret</code></td>
+<td>Yes*</td>
+<td>Naver Commerce client secret</td>
+</tr>
+</tbody>
+</table>
+<h4 id="example-request_1">Example Request<a class="headerlink" href="#example-request_1" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code>curl<span class="w"> </span>-X<span class="w"> </span>GET<span class="w"> </span><span class="s2">&quot;https://magic-meal-kits-xxxxx.run.app/api/v1/naver/account&quot;</span><span class="w"> </span><span class="se">\</span>
+<span class="w">     </span>-H<span class="w"> </span><span class="s2">&quot;X-API-KEY: your-api-key&quot;</span><span class="w"> </span><span class="se">\</span>
+<span class="w">     </span>-H<span class="w"> </span><span class="s2">&quot;X-Naver-Client-ID: your-client-id&quot;</span><span class="w"> </span><span class="se">\</span>
+<span class="w">     </span>-H<span class="w"> </span><span class="s2">&quot;X-Naver-Client-Secret: your-client-secret&quot;</span>
+</code></pre></div>
+<h4 id="success-response_1">Success Response<a class="headerlink" href="#success-response_1" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;account&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nt">&quot;accountId&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;seller_store_123&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;accountUid&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;uid_abc123def456&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;grade&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;POWER&quot;</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+<h4 id="response-fields_1">Response Fields<a class="headerlink" href="#response-fields_1" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>account.accountId</code></td>
+<td>String</td>
+<td>API seller ID (스토어 식별자)</td>
+</tr>
+<tr>
+<td><code>account.accountUid</code></td>
+<td>String</td>
+<td>Unique account identifier</td>
+</tr>
+<tr>
+<td><code>account.grade</code></td>
+<td>String</td>
+<td>Seller grade (e.g., "POWER", "BIG", "NORMAL")</td>
+</tr>
+</tbody>
+</table>
+<h4 id="error-responses_1">Error Responses<a class="headerlink" href="#error-responses_1" title="Permanent link">&para;</a></h4>
+<p><strong>Token Error (500)</strong>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;error&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;failed to get token: client_id and client_secret are required&quot;</span>
+<span class="p">}</span>
+</code></pre></div></p>
+<p><strong>Account Retrieval Error (500)</strong>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;error&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;failed to get seller account: unexpected status code: 401&quot;</span>
+<span class="p">}</span>
+</code></pre></div></p>
+<hr />
+<h3 id="get-product-brands">Get Product Brands<a class="headerlink" href="#get-product-brands" title="Permanent link">&para;</a></h3>
+<p>Search for product brands by name.</p>
+<h4 id="endpoint_2">Endpoint<a class="headerlink" href="#endpoint_2" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code>GET /api/v1/naver/product-brands
+</code></pre></div>
+<h4 id="request-headers_2">Request Headers<a class="headerlink" href="#request-headers_2" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Header</th>
+<th>Required</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>X-API-KEY</code></td>
+<td>Yes</td>
+<td>Magic Meal Kits API key</td>
+</tr>
+<tr>
+<td><code>X-Naver-Client-ID</code></td>
+<td>Yes*</td>
+<td>Naver Commerce client ID</td>
+</tr>
+<tr>
+<td><code>X-Naver-Client-Secret</code></td>
+<td>Yes*</td>
+<td>Naver Commerce client secret</td>
+</tr>
+</tbody>
+</table>
+<h4 id="query-parameters_1">Query Parameters<a class="headerlink" href="#query-parameters_1" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Required</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>name</code></td>
+<td>String</td>
+<td>Yes</td>
+<td>Brand name to search</td>
+</tr>
+</tbody>
+</table>
+<h4 id="example-request_2">Example Request<a class="headerlink" href="#example-request_2" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code>curl<span class="w"> </span>-X<span class="w"> </span>GET<span class="w"> </span><span class="s2">&quot;https://magic-meal-kits-xxxxx.run.app/api/v1/naver/product-brands?name=Samsung&quot;</span><span class="w"> </span><span class="se">\</span>
+<span class="w">     </span>-H<span class="w"> </span><span class="s2">&quot;X-API-KEY: your-api-key&quot;</span><span class="w"> </span><span class="se">\</span>
+<span class="w">     </span>-H<span class="w"> </span><span class="s2">&quot;X-Naver-Client-ID: your-client-id&quot;</span><span class="w"> </span><span class="se">\</span>
+<span class="w">     </span>-H<span class="w"> </span><span class="s2">&quot;X-Naver-Client-Secret: your-client-secret&quot;</span>
+</code></pre></div>
+<h4 id="success-response_2">Success Response<a class="headerlink" href="#success-response_2" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;brands&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">      </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">12345</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Samsung Electronics&quot;</span>
+<span class="w">    </span><span class="p">},</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">      </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">12346</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Samsung Display&quot;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">  </span><span class="p">]</span>
+<span class="p">}</span>
+</code></pre></div>
+<h4 id="response-fields_2">Response Fields<a class="headerlink" href="#response-fields_2" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>brands</code></td>
+<td>Array</td>
+<td>List of matching brands</td>
+</tr>
+<tr>
+<td><code>brands[].id</code></td>
+<td>Integer</td>
+<td>Brand ID</td>
+</tr>
+<tr>
+<td><code>brands[].name</code></td>
+<td>String</td>
+<td>Brand name</td>
+</tr>
+</tbody>
+</table>
+<h4 id="edge-cases">Edge Cases<a class="headerlink" href="#edge-cases" title="Permanent link">&para;</a></h4>
+<p><strong>No Results</strong>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;brands&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[]</span>
+<span class="p">}</span>
+</code></pre></div></p>
+<p><strong>Empty Search Term</strong>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;brands&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[]</span>
+<span class="p">}</span>
+</code></pre></div></p>
+<hr />
+<h3 id="get-orders">Get Orders<a class="headerlink" href="#get-orders" title="Permanent link">&para;</a></h3>
+<p>Retrieves product orders with optional filtering by date range, status, and pagination.</p>
+<h4 id="endpoint_3">Endpoint<a class="headerlink" href="#endpoint_3" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code>GET /api/v1/naver/order
+</code></pre></div>
+<h4 id="request-headers_3">Request Headers<a class="headerlink" href="#request-headers_3" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Header</th>
+<th>Required</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>X-API-KEY</code></td>
+<td>Yes</td>
+<td>Magic Meal Kits API key</td>
+</tr>
+<tr>
+<td><code>X-Naver-Client-ID</code></td>
+<td>Yes*</td>
+<td>Naver Commerce client ID</td>
+</tr>
+<tr>
+<td><code>X-Naver-Client-Secret</code></td>
+<td>Yes*</td>
+<td>Naver Commerce client secret</td>
+</tr>
+</tbody>
+</table>
+<h4 id="query-parameters_2">Query Parameters<a class="headerlink" href="#query-parameters_2" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Required</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>from</code></td>
+<td>String</td>
+<td>No</td>
+<td>10 days ago</td>
+<td>Start date (YYYY-MM-DD format)</td>
+</tr>
+<tr>
+<td><code>to</code></td>
+<td>String</td>
+<td>No</td>
+<td>Now</td>
+<td>End date (YYYY-MM-DD format)</td>
+</tr>
+<tr>
+<td><code>status</code></td>
+<td>String</td>
+<td>No</td>
+<td>All</td>
+<td>Comma-separated order statuses</td>
+</tr>
+<tr>
+<td><code>range_type</code></td>
+<td>String</td>
+<td>No</td>
+<td><code>PAYED_DATETIME</code></td>
+<td>Date range type</td>
+</tr>
+<tr>
+<td><code>page</code></td>
+<td>Integer</td>
+<td>No</td>
+<td>1</td>
+<td>Page number</td>
+</tr>
+<tr>
+<td><code>page_size</code></td>
+<td>Integer</td>
+<td>No</td>
+<td>10</td>
+<td>Items per page</td>
+</tr>
+</tbody>
+</table>
+<h4 id="status-values">Status Values<a class="headerlink" href="#status-values" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Status</th>
+<th>Korean</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>PAYMENT_WAITING</code></td>
+<td>결제대기</td>
+<td>Order placed, waiting for payment</td>
+</tr>
+<tr>
+<td><code>PAYED</code></td>
+<td>결제완료</td>
+<td>Payment completed, before dispatch</td>
+</tr>
+<tr>
+<td><code>DELIVERING</code></td>
+<td>배송중</td>
+<td>In delivery</td>
+</tr>
+<tr>
+<td><code>DELIVERED</code></td>
+<td>배송완료</td>
+<td>Delivery completed</td>
+</tr>
+<tr>
+<td><code>PURCHASE_DECIDED</code></td>
+<td>구매확정</td>
+<td>Purchase confirmed by customer</td>
+</tr>
+<tr>
+<td><code>CANCELED</code></td>
+<td>취소</td>
+<td>Order canceled</td>
+</tr>
+<tr>
+<td><code>RETURNED</code></td>
+<td>반품</td>
+<td>Return completed</td>
+</tr>
+<tr>
+<td><code>EXCHANGED</code></td>
+<td>교환</td>
+<td>Exchange completed</td>
+</tr>
+<tr>
+<td><code>CANCELED_BY_NOPAYMENT</code></td>
+<td>미결제취소</td>
+<td>Canceled due to non-payment</td>
+</tr>
+</tbody>
+</table>
+<h4 id="range-type-values">Range Type Values<a class="headerlink" href="#range-type-values" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>PAYED_DATETIME</code></td>
+<td>Filter by payment date (default)</td>
+</tr>
+<tr>
+<td><code>ORDERED_DATETIME</code></td>
+<td>Filter by order date</td>
+</tr>
+<tr>
+<td><code>DISPATCHED_DATETIME</code></td>
+<td>Filter by dispatch date</td>
+</tr>
+<tr>
+<td><code>PURCHASE_DECIDED_DATETIME</code></td>
+<td>Filter by purchase decision date</td>
+</tr>
+<tr>
+<td><code>CLAIM_REQUESTED_DATETIME</code></td>
+<td>Filter by claim request date</td>
+</tr>
+<tr>
+<td><code>CLAIM_COMPLETED_DATETIME</code></td>
+<td>Filter by claim completion date</td>
+</tr>
+</tbody>
+</table>
+<h4 id="example-requests">Example Requests<a class="headerlink" href="#example-requests" title="Permanent link">&para;</a></h4>
+<p><strong>Basic Request (Last 10 Days)</strong>
+<div class="highlight"><pre><span></span><code>curl<span class="w"> </span>-X<span class="w"> </span>GET<span class="w"> </span><span class="s2">&quot;https://magic-meal-kits-xxxxx.run.app/api/v1/naver/order&quot;</span><span class="w"> </span><span class="se">\</span>
+<span class="w">     </span>-H<span class="w"> </span><span class="s2">&quot;X-API-KEY: your-api-key&quot;</span><span class="w"> </span><span class="se">\</span>
+<span class="w">     </span>-H<span class="w"> </span><span class="s2">&quot;X-Naver-Client-ID: your-client-id&quot;</span><span class="w"> </span><span class="se">\</span>
+<span class="w">     </span>-H<span class="w"> </span><span class="s2">&quot;X-Naver-Client-Secret: your-client-secret&quot;</span>
+</code></pre></div></p>
+<p><strong>With Date Range</strong>
+<div class="highlight"><pre><span></span><code>curl<span class="w"> </span>-X<span class="w"> </span>GET<span class="w"> </span><span class="s2">&quot;https://magic-meal-kits-xxxxx.run.app/api/v1/naver/order?from=2025-01-01&amp;to=2025-01-24&quot;</span><span class="w"> </span><span class="se">\</span>
+<span class="w">     </span>-H<span class="w"> </span><span class="s2">&quot;X-API-KEY: your-api-key&quot;</span><span class="w"> </span><span class="se">\</span>
+<span class="w">     </span>-H<span class="w"> </span><span class="s2">&quot;X-Naver-Client-ID: your-client-id&quot;</span><span class="w"> </span><span class="se">\</span>
+<span class="w">     </span>-H<span class="w"> </span><span class="s2">&quot;X-Naver-Client-Secret: your-client-secret&quot;</span>
+</code></pre></div></p>
+<p><strong>With Status Filter</strong>
+<div class="highlight"><pre><span></span><code>curl<span class="w"> </span>-X<span class="w"> </span>GET<span class="w"> </span><span class="s2">&quot;https://magic-meal-kits-xxxxx.run.app/api/v1/naver/order?status=PAYED,DELIVERING&quot;</span><span class="w"> </span><span class="se">\</span>
+<span class="w">     </span>-H<span class="w"> </span><span class="s2">&quot;X-API-KEY: your-api-key&quot;</span><span class="w"> </span><span class="se">\</span>
+<span class="w">     </span>-H<span class="w"> </span><span class="s2">&quot;X-Naver-Client-ID: your-client-id&quot;</span><span class="w"> </span><span class="se">\</span>
+<span class="w">     </span>-H<span class="w"> </span><span class="s2">&quot;X-Naver-Client-Secret: your-client-secret&quot;</span>
+</code></pre></div></p>
+<p><strong>With Pagination</strong>
+<div class="highlight"><pre><span></span><code>curl<span class="w"> </span>-X<span class="w"> </span>GET<span class="w"> </span><span class="s2">&quot;https://magic-meal-kits-xxxxx.run.app/api/v1/naver/order?page=2&amp;page_size=50&quot;</span><span class="w"> </span><span class="se">\</span>
+<span class="w">     </span>-H<span class="w"> </span><span class="s2">&quot;X-API-KEY: your-api-key&quot;</span><span class="w"> </span><span class="se">\</span>
+<span class="w">     </span>-H<span class="w"> </span><span class="s2">&quot;X-Naver-Client-ID: your-client-id&quot;</span><span class="w"> </span><span class="se">\</span>
+<span class="w">     </span>-H<span class="w"> </span><span class="s2">&quot;X-Naver-Client-Secret: your-client-secret&quot;</span>
+</code></pre></div></p>
+<p><strong>Full Example with All Parameters</strong>
+<div class="highlight"><pre><span></span><code>curl<span class="w"> </span>-X<span class="w"> </span>GET<span class="w"> </span><span class="s2">&quot;https://magic-meal-kits-xxxxx.run.app/api/v1/naver/order?\</span>
+<span class="s2">from=2025-01-01&amp;\</span>
+<span class="s2">to=2025-01-24&amp;\</span>
+<span class="s2">status=PAYED,DELIVERING,DELIVERED&amp;\</span>
+<span class="s2">range_type=PAYED_DATETIME&amp;\</span>
+<span class="s2">page=1&amp;\</span>
+<span class="s2">page_size=100&quot;</span><span class="w"> </span><span class="se">\</span>
+<span class="w">     </span>-H<span class="w"> </span><span class="s2">&quot;X-API-KEY: your-api-key&quot;</span><span class="w"> </span><span class="se">\</span>
+<span class="w">     </span>-H<span class="w"> </span><span class="s2">&quot;X-Naver-Client-ID: your-client-id&quot;</span><span class="w"> </span><span class="se">\</span>
+<span class="w">     </span>-H<span class="w"> </span><span class="s2">&quot;X-Naver-Client-Secret: your-client-secret&quot;</span>
+</code></pre></div></p>
+<h4 id="success-response_3">Success Response<a class="headerlink" href="#success-response_3" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;orders&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nt">&quot;timestamp&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2025-01-24T10:30:00+09:00&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;traceId&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;abc123def456&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;data&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="nt">&quot;contents&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">        </span><span class="p">{</span>
+<span class="w">          </span><span class="nt">&quot;orderId&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2025012412345678&quot;</span><span class="p">,</span>
+<span class="w">          </span><span class="nt">&quot;status&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;PAYED&quot;</span>
+<span class="w">        </span><span class="p">},</span>
+<span class="w">        </span><span class="p">{</span>
+<span class="w">          </span><span class="nt">&quot;orderId&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2025012412345679&quot;</span><span class="p">,</span>
+<span class="w">          </span><span class="nt">&quot;status&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;DELIVERING&quot;</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">      </span><span class="p">],</span>
+<span class="w">      </span><span class="nt">&quot;pagination&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nt">&quot;totalPages&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;currentPage&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;totalElements&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">48</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;pageSize&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">10</span>
+<span class="w">      </span><span class="p">}</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+<h4 id="response-fields_3">Response Fields<a class="headerlink" href="#response-fields_3" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>orders.timestamp</code></td>
+<td>String</td>
+<td>Response timestamp (ISO 8601)</td>
+</tr>
+<tr>
+<td><code>orders.traceId</code></td>
+<td>String</td>
+<td>Request trace ID for debugging</td>
+</tr>
+<tr>
+<td><code>orders.data.contents</code></td>
+<td>Array</td>
+<td>List of orders</td>
+</tr>
+<tr>
+<td><code>orders.data.contents[].orderId</code></td>
+<td>String</td>
+<td>Order ID</td>
+</tr>
+<tr>
+<td><code>orders.data.contents[].status</code></td>
+<td>String</td>
+<td>Order status</td>
+</tr>
+<tr>
+<td><code>orders.data.pagination.totalPages</code></td>
+<td>Integer</td>
+<td>Total number of pages</td>
+</tr>
+<tr>
+<td><code>orders.data.pagination.currentPage</code></td>
+<td>Integer</td>
+<td>Current page number</td>
+</tr>
+<tr>
+<td><code>orders.data.pagination.totalElements</code></td>
+<td>Integer</td>
+<td>Total number of orders</td>
+</tr>
+<tr>
+<td><code>orders.data.pagination.pageSize</code></td>
+<td>Integer</td>
+<td>Items per page</td>
+</tr>
+</tbody>
+</table>
+<h4 id="error-responses_2">Error Responses<a class="headerlink" href="#error-responses_2" title="Permanent link">&para;</a></h4>
+<p><strong>Invalid Date Format (400)</strong>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;error&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;invalid &#39;from&#39; date format, use YYYY-MM-DD&quot;</span>
+<span class="p">}</span>
+</code></pre></div></p>
+<p><strong>Invalid Date Range (400)</strong>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;error&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;invalid &#39;to&#39; date format, use YYYY-MM-DD&quot;</span>
+<span class="p">}</span>
+</code></pre></div></p>
+<p><strong>Token Error (500)</strong>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;error&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;failed to get token: client_id and client_secret are required&quot;</span>
+<span class="p">}</span>
+</code></pre></div></p>
+<p><strong>API Error (500)</strong>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;error&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;unexpected status code: 400, response body: {\&quot;message\&quot;:\&quot;Invalid parameter\&quot;}&quot;</span>
+<span class="p">}</span>
+</code></pre></div></p>
+<h4 id="edge-cases_1">Edge Cases<a class="headerlink" href="#edge-cases_1" title="Permanent link">&para;</a></h4>
+<p><strong>No Orders Found</strong>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;orders&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nt">&quot;timestamp&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2025-01-24T10:30:00+09:00&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;traceId&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;abc123def456&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;data&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="nt">&quot;contents&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[],</span>
+<span class="w">      </span><span class="nt">&quot;pagination&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nt">&quot;totalPages&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;currentPage&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;totalElements&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;pageSize&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">10</span>
+<span class="w">      </span><span class="p">}</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></p>
+<p><strong>Date Range Exceeds 6 Months</strong>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;error&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;unexpected status code: 400, response body: {\&quot;message\&quot;:\&quot;Query period cannot exceed 6 months\&quot;}&quot;</span>
+<span class="p">}</span>
+</code></pre></div></p>
+<hr />
+<h2 id="data-types">Data Types<a class="headerlink" href="#data-types" title="Permanent link">&para;</a></h2>
+<h3 id="order-status-flow">Order Status Flow<a class="headerlink" href="#order-status-flow" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code>결제대기 (PAYMENT_WAITING)
+    │
+    ▼
+결제완료 (PAYED) ──────────────────┐
+    │                              │
+    ▼                              ▼
+배송중 (DELIVERING)          취소요청 ─▶ 취소 (CANCELED)
+    │                              │
+    ▼                              ▼
+배송완료 (DELIVERED)         반품요청 ─▶ 반품 (RETURNED)
+    │                              │
+    ▼                              ▼
+구매확정 (PURCHASE_DECIDED)  교환요청 ─▶ 교환 (EXCHANGED)
+</code></pre></div>
+<h3 id="claim-status-types">Claim Status Types<a class="headerlink" href="#claim-status-types" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Status</th>
+<th>Korean</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>CANCEL_REQUEST</code></td>
+<td>취소요청</td>
+<td>Cancel requested by customer</td>
+</tr>
+<tr>
+<td><code>CANCELING</code></td>
+<td>취소진행중</td>
+<td>Cancel in progress</td>
+</tr>
+<tr>
+<td><code>CANCEL_DONE</code></td>
+<td>취소완료</td>
+<td>Cancel completed</td>
+</tr>
+<tr>
+<td><code>CANCEL_REJECT</code></td>
+<td>취소거부</td>
+<td>Cancel rejected by seller</td>
+</tr>
+<tr>
+<td><code>RETURN_REQUEST</code></td>
+<td>반품요청</td>
+<td>Return requested</td>
+</tr>
+<tr>
+<td><code>EXCHANGE_REQUEST</code></td>
+<td>교환요청</td>
+<td>Exchange requested</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="error-handling">Error Handling<a class="headerlink" href="#error-handling" title="Permanent link">&para;</a></h2>
+<h3 id="http-status-codes">HTTP Status Codes<a class="headerlink" href="#http-status-codes" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Code</th>
+<th>Meaning</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>200</code></td>
+<td>OK</td>
+<td>Request successful</td>
+</tr>
+<tr>
+<td><code>400</code></td>
+<td>Bad Request</td>
+<td>Invalid parameters</td>
+</tr>
+<tr>
+<td><code>401</code></td>
+<td>Unauthorized</td>
+<td>Invalid or missing API key</td>
+</tr>
+<tr>
+<td><code>429</code></td>
+<td>Too Many Requests</td>
+<td>Rate limit exceeded</td>
+</tr>
+<tr>
+<td><code>500</code></td>
+<td>Internal Server Error</td>
+<td>Server error or Naver API error</td>
+</tr>
+</tbody>
+</table>
+<h3 id="error-response-format">Error Response Format<a class="headerlink" href="#error-response-format" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;error&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Error message description&quot;</span>
+<span class="p">}</span>
+</code></pre></div>
+<h3 id="common-errors">Common Errors<a class="headerlink" href="#common-errors" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Error</th>
+<th>Cause</th>
+<th>Solution</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>client_id and client_secret are required</code></td>
+<td>Missing credentials</td>
+<td>Add X-Naver-Client-ID and X-Naver-Client-Secret headers</td>
+</tr>
+<tr>
+<td><code>invalid 'from' date format</code></td>
+<td>Wrong date format</td>
+<td>Use YYYY-MM-DD format</td>
+</tr>
+<tr>
+<td><code>API request failed with status 401</code></td>
+<td>Invalid Naver credentials</td>
+<td>Verify client_id and client_secret</td>
+</tr>
+<tr>
+<td><code>unexpected status code: 429</code></td>
+<td>Rate limit exceeded</td>
+<td>Reduce request frequency</td>
+</tr>
+<tr>
+<td><code>GW.IP_NOT_ALLOWED</code></td>
+<td>IP not registered</td>
+<td>Register IP at Naver Commerce API Center</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="rate-limiting">Rate Limiting<a class="headerlink" href="#rate-limiting" title="Permanent link">&para;</a></h2>
+<h3 id="naver-commerce-api-limits">Naver Commerce API Limits<a class="headerlink" href="#naver-commerce-api-limits" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Limit</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>General queries</td>
+<td>10 requests/second</td>
+</tr>
+<tr>
+<td>Bulk queries</td>
+<td>5 requests/second</td>
+</tr>
+<tr>
+<td>Query period</td>
+<td>Maximum 6 months</td>
+</tr>
+</tbody>
+</table>
+<h3 id="best-practices">Best Practices<a class="headerlink" href="#best-practices" title="Permanent link">&para;</a></h3>
+<ol>
+<li><strong>Implement exponential backoff</strong> for 429 errors</li>
+<li><strong>Cache token responses</strong> (valid for 1 hour)</li>
+<li><strong>Batch requests</strong> when possible</li>
+<li><strong>Use pagination</strong> for large result sets</li>
+</ol>
+<hr />
+<h2 id="ip-registration">IP Registration<a class="headerlink" href="#ip-registration" title="Permanent link">&para;</a></h2>
+<h3 id="requirement">Requirement<a class="headerlink" href="#requirement" title="Permanent link">&para;</a></h3>
+<p>Naver Commerce API requires IP registration for security.</p>
+<table>
+<thead>
+<tr>
+<th>Item</th>
+<th>Details</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Max IPs</td>
+<td>3 per application</td>
+</tr>
+<tr>
+<td>Region</td>
+<td>Korea only (domestic IPs)</td>
+</tr>
+<tr>
+<td>Registration</td>
+<td><a href="https://apicenter.commerce.naver.com/">Naver Commerce API Center</a></td>
+</tr>
+</tbody>
+</table>
+<h3 id="registration-path">Registration Path<a class="headerlink" href="#registration-path" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code>커머스API센터 &gt; 내 스토어 애플리케이션 &gt; 애플리케이션 선택 &gt; 수정 &gt; API호출 IP
+</code></pre></div>
+<h3 id="cloud-deployment-note">Cloud Deployment Note<a class="headerlink" href="#cloud-deployment-note" title="Permanent link">&para;</a></h3>
+<p>If using cloud services (AWS, GCP, etc.):
+- Cloud Run / Lambda have dynamic IPs
+- Consider using NAT Gateway for static IP
+- Some cloud IPs may be blocked even in Korea region</p>
+<hr />
+<h2 id="mcp-integration">MCP Integration<a class="headerlink" href="#mcp-integration" title="Permanent link">&para;</a></h2>
+<h3 id="available-tools">Available Tools<a class="headerlink" href="#available-tools" title="Permanent link">&para;</a></h3>
+<p>The Naver Commerce API is also available via MCP (Model Context Protocol):</p>
+<table>
+<thead>
+<tr>
+<th>Tool</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>naver_get_orders</code></td>
+<td>Query orders with filters</td>
+</tr>
+<tr>
+<td><code>naver_get_account</code></td>
+<td>Get seller account info</td>
+</tr>
+<tr>
+<td><code>naver_get_brands</code></td>
+<td>Search product brands</td>
+</tr>
+</tbody>
+</table>
+<h3 id="usage">Usage<a class="headerlink" href="#usage" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code>/mcp?tools=naver
+</code></pre></div>
+<h3 id="mcp-tool-parameters">MCP Tool Parameters<a class="headerlink" href="#mcp-tool-parameters" title="Permanent link">&para;</a></h3>
+<h4 id="naver_get_orders">naver_get_orders<a class="headerlink" href="#naver_get_orders" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;client_id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;your-client-id&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;client_secret&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;your-client-secret&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;from&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2025-01-01&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;to&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2025-01-24&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;status&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;PAYED,DELIVERING&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;page&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;page_size&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">50</span>
+<span class="p">}</span>
+</code></pre></div>
+<h4 id="naver_get_account">naver_get_account<a class="headerlink" href="#naver_get_account" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;client_id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;your-client-id&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;client_secret&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;your-client-secret&quot;</span>
+<span class="p">}</span>
+</code></pre></div>
+<h4 id="naver_get_brands">naver_get_brands<a class="headerlink" href="#naver_get_brands" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;client_id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;your-client-id&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;client_secret&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;your-client-secret&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Samsung&quot;</span>
+<span class="p">}</span>
+</code></pre></div>
+<hr />
+<h2 id="references">References<a class="headerlink" href="#references" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="https://apicenter.commerce.naver.com/">Naver Commerce API Official Documentation</a></li>
+<li><a href="https://apicenter.commerce.naver.com/ko/basic/commerce-api">OAuth2 Authentication Guide</a></li>
+<li><a href="https://github.com/commerce-api-naver/commerce-api/discussions">GitHub Technical Support</a></li>
+</ul>
+<hr />
+<h2 id="changelog">Changelog<a class="headerlink" href="#changelog" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Version</th>
+<th>Date</th>
+<th>Changes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1.0.0</td>
+<td>2025-01-24</td>
+<td>Initial release</td>
+</tr>
+<tr>
+<td>1.1.0</td>
+<td>2025-01-24</td>
+<td>Added header-based authentication</td>
+</tr>
+<tr>
+<td>1.2.0</td>
+<td>2025-01-24</td>
+<td>Extended order query parameters</td>
+</tr>
+</tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        
+<div class="md-social">
+  
+    
+    
+    
+    
+    <a href="https://make.magicmealkits.com/" target="_blank" rel="noopener" title="Magic Meal Kits Service" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M351.9 280H161c2.9 64.5 17.2 123.9 37.5 167.4 11.4 24.5 23.7 41.8 35.1 52.4 11.2 10.5 18.9 12.2 22.9 12.2s11.7-1.7 22.9-12.2c11.4-10.6 23.7-28 35.1-52.4 20.3-43.5 34.6-102.9 37.5-167.4zm-191-48h190.9c-2.8-64.5-17.1-123.9-37.4-167.4-11.4-24.4-23.7-41.8-35.1-52.4C268.1 1.7 260.4 0 256.4 0s-11.7 1.7-22.9 12.2c-11.4 10.6-23.7 28-35.1 52.4-20.3 43.5-34.6 102.9-37.5 167.4m-48 0c3.5-85.6 25.6-165.1 57.9-217.3C78.7 47.3 10.9 131.2 1.5 232zM1.5 280c9.4 100.8 77.2 184.7 169.3 217.3-32.3-52.2-54.4-131.7-57.9-217.3zm398.4 0c-3.5 85.6-25.6 165.1-57.9 217.3 92.1-32.7 159.9-116.5 169.3-217.3zm111.4-48C501.9 131.2 434.1 47.3 342 14.7c32.3 52.2 54.4 131.7 57.9 217.3z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.sections", "navigation.expand", "content.code.copy"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+    
+  </body>
+</html>

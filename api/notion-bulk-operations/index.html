@@ -1,0 +1,2125 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="API documentation for Magic Meal Kits">
+      
+      
+        <meta name="author" content="푸르공">
+      
+      
+        <link rel="canonical" href="https://docs.magicmealkits.com/api/notion-bulk-operations/">
+      
+      
+        <link rel="prev" href="../notion/">
+      
+      
+        <link rel="next" href="../slack/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.1">
+    
+    
+      
+        <title>Notion Bulk Operations API - Magic Meal Kits API Documentation</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="black" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#notion-bulk-operations-api" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Magic Meal Kits API Documentation" class="md-header__button md-logo" aria-label="Magic Meal Kits API Documentation" data-md-component="logo">
+      
+  <img src="../../assets/images/logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Magic Meal Kits API Documentation
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Notion Bulk Operations API
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../" class="md-tabs__link">
+          
+  
+  
+  API Reference
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../mcp/overview.md" class="md-tabs__link">
+          
+  
+  
+  MCP Server
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="https://make.magicmealkits.com/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Magic Meal Kits
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Magic Meal Kits API Documentation" class="md-nav__button md-logo" aria-label="Magic Meal Kits API Documentation" data-md-component="logo">
+      
+  <img src="../../assets/images/logo.png" alt="logo">
+
+    </a>
+    Magic Meal Kits API Documentation
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    API Reference
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    API Reference
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Overview
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../pdf/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    PDF API
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../javascript/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    JavaScript API
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../youtube/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    YouTube API
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../notion/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Notion API
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Notion Bulk Operations API
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Notion Bulk Operations API
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#authentication" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Authentication
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Authentication">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#getting-your-notion-integration-token" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Getting Your Notion Integration Token
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#rate-limiting-and-retry-logic" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Rate Limiting and Retry Logic
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#endpoints" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Endpoints
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Endpoints">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#bulk-insert-records" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Bulk Insert Records
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Bulk Insert Records">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#post-apiv1notionbulk-insert" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        POST /api/v1/notion/bulk-insert
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bulk-update-records" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Bulk Update Records
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Bulk Update Records">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#post-apiv1notionbulk-update" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        POST /api/v1/notion/bulk-update
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bulk-delete-records" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Bulk Delete Records
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Bulk Delete Records">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#post-apiv1notionbulk-delete" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        POST /api/v1/notion/bulk-delete
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#error-handling" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Error Handling
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#data-format" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Data Format
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Data Format">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#supported-property-types" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Supported Property Types
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#field-type-examples" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Field Type Examples
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Field Type Examples">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#title-fields" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Title Fields
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rich-text-fields" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Rich Text Fields
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#number-fields" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Number Fields
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#select-fields" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Select Fields
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#multi-select-fields" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Multi-select Fields
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#date-fields" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Date Fields
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#checkbox-fields" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Checkbox Fields
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#email-fields" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Email Fields
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#phone-number-fields" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Phone Number Fields
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#url-fields" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        URL Fields
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#relation-fields" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Relation Fields
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#status-fields" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Status Fields
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#best-practices" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Best Practices
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../slack/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Slack API
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../proxy/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Proxy Image API
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../naver-commerce/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Naver Commerce API
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    MCP Server
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    MCP Server
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../mcp/overview.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Overview
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../mcp/claude-ai-setup.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Claude.ai Setup
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../mcp/claude-code-setup.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Claude Code Setup
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://make.magicmealkits.com/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Magic Meal Kits
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#authentication" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Authentication
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Authentication">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#getting-your-notion-integration-token" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Getting Your Notion Integration Token
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#rate-limiting-and-retry-logic" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Rate Limiting and Retry Logic
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#endpoints" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Endpoints
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Endpoints">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#bulk-insert-records" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Bulk Insert Records
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Bulk Insert Records">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#post-apiv1notionbulk-insert" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        POST /api/v1/notion/bulk-insert
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bulk-update-records" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Bulk Update Records
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Bulk Update Records">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#post-apiv1notionbulk-update" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        POST /api/v1/notion/bulk-update
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bulk-delete-records" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Bulk Delete Records
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Bulk Delete Records">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#post-apiv1notionbulk-delete" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        POST /api/v1/notion/bulk-delete
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#error-handling" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Error Handling
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#data-format" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Data Format
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Data Format">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#supported-property-types" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Supported Property Types
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#field-type-examples" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Field Type Examples
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Field Type Examples">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#title-fields" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Title Fields
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rich-text-fields" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Rich Text Fields
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#number-fields" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Number Fields
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#select-fields" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Select Fields
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#multi-select-fields" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Multi-select Fields
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#date-fields" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Date Fields
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#checkbox-fields" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Checkbox Fields
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#email-fields" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Email Fields
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#phone-number-fields" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Phone Number Fields
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#url-fields" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        URL Fields
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#relation-fields" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Relation Fields
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#status-fields" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Status Fields
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#best-practices" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Best Practices
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="notion-bulk-operations-api">Notion Bulk Operations API<a class="headerlink" href="#notion-bulk-operations-api" title="Permanent link">&para;</a></h1>
+<p>The Notion Bulk Operations API provides high-performance endpoints for bulk inserting, updating, and deleting records in Notion databases. These endpoints use the official Notion API and support concurrent operations with automatic retry logic.</p>
+<h2 id="authentication">Authentication<a class="headerlink" href="#authentication" title="Permanent link">&para;</a></h2>
+<p>All bulk operation endpoints require two authentication headers:</p>
+<ul>
+<li><code>X-API-KEY</code>: Your Magic Meal Kits API key</li>
+<li><code>X-Notion-Token</code>: Your Notion integration API token (not the cookie token)</li>
+</ul>
+<div class="highlight"><pre><span></span><code>curl<span class="w"> </span>-X<span class="w"> </span>POST<span class="w"> </span><span class="s2">&quot;https://magic-meal-kits-xxxxx.run.app/api/v1/notion/bulk-insert&quot;</span><span class="w"> </span><span class="se">\</span>
+<span class="w">     </span>-H<span class="w"> </span><span class="s2">&quot;X-API-KEY: your-api-key&quot;</span><span class="w"> </span><span class="se">\</span>
+<span class="w">     </span>-H<span class="w"> </span><span class="s2">&quot;X-Notion-Token: your-notion-integration-token&quot;</span><span class="w"> </span><span class="se">\</span>
+<span class="w">     </span>-H<span class="w"> </span><span class="s2">&quot;Content-Type: application/json&quot;</span><span class="w"> </span><span class="se">\</span>
+<span class="w">     </span>-d<span class="w"> </span><span class="s1">&#39;{</span>
+<span class="s1">       &quot;database_id&quot;: &quot;your-database-id&quot;,</span>
+<span class="s1">       &quot;records&quot;: [...]</span>
+<span class="s1">     }&#39;</span>
+</code></pre></div>
+<h3 id="getting-your-notion-integration-token">Getting Your Notion Integration Token<a class="headerlink" href="#getting-your-notion-integration-token" title="Permanent link">&para;</a></h3>
+<ol>
+<li>Go to <a href="https://www.notion.so/my-integrations">Notion Integrations</a></li>
+<li>Create a new integration or use an existing one</li>
+<li>Copy the "Internal Integration Token" (starts with <code>secret_</code>)</li>
+<li>Share your database with the integration by clicking "Share" on your database and adding the integration</li>
+</ol>
+<h2 id="rate-limiting-and-retry-logic">Rate Limiting and Retry Logic<a class="headerlink" href="#rate-limiting-and-retry-logic" title="Permanent link">&para;</a></h2>
+<ul>
+<li><strong>Rate Limiting</strong>: All endpoints respect Notion's API rate limits</li>
+<li><strong>Automatic Retry</strong>: Failed operations are automatically retried</li>
+<li><strong>Concurrent Processing</strong>: Operations run concurrently for better performance</li>
+<li><strong>Batch Limits</strong>: Maximum 100 records per request</li>
+</ul>
+<h2 id="endpoints">Endpoints<a class="headerlink" href="#endpoints" title="Permanent link">&para;</a></h2>
+<h3 id="bulk-insert-records">Bulk Insert Records<a class="headerlink" href="#bulk-insert-records" title="Permanent link">&para;</a></h3>
+<p>Inserts multiple records into a Notion database.</p>
+<h4 id="post-apiv1notionbulk-insert">POST <code>/api/v1/notion/bulk-insert</code><a class="headerlink" href="#post-apiv1notionbulk-insert" title="Permanent link">&para;</a></h4>
+<p><strong>Request Headers:</strong>
+<div class="highlight"><pre><span></span><code>X-API-KEY: your-api-key
+X-Notion-Token: your-notion-integration-token
+Content-Type: application/json
+</code></pre></div></p>
+<p><strong>Request Body:</strong></p>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;database_id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;your-database-id&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;records&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">      </span><span class="nt">&quot;Name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;John Doe&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;Email&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;john@example.com&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;Status&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Active&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;Priority&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;High&quot;</span>
+<span class="w">    </span><span class="p">},</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">      </span><span class="nt">&quot;Name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Jane Smith&quot;</span><span class="p">,</span><span class="w"> </span>
+<span class="w">      </span><span class="nt">&quot;Email&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;jane@example.com&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;Status&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Inactive&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;Priority&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Medium&quot;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">  </span><span class="p">]</span>
+<span class="p">}</span>
+</code></pre></div>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Type</th>
+<th>Required</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>database_id</td>
+<td>String</td>
+<td>Yes</td>
+<td>Notion database ID</td>
+</tr>
+<tr>
+<td>records</td>
+<td>Array</td>
+<td>Yes</td>
+<td>Array of records to insert (max 100)</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Example Request:</strong></p>
+<div class="highlight"><pre><span></span><code>curl<span class="w"> </span>-X<span class="w"> </span>POST<span class="w"> </span><span class="s2">&quot;https://magic-meal-kits-xxxxx.run.app/api/v1/notion/bulk-insert&quot;</span><span class="w"> </span><span class="se">\</span>
+<span class="w">     </span>-H<span class="w"> </span><span class="s2">&quot;X-API-KEY: your-api-key&quot;</span><span class="w"> </span><span class="se">\</span>
+<span class="w">     </span>-H<span class="w"> </span><span class="s2">&quot;X-Notion-Token: your-notion-integration-token&quot;</span><span class="w"> </span><span class="se">\</span>
+<span class="w">     </span>-H<span class="w"> </span><span class="s2">&quot;Content-Type: application/json&quot;</span><span class="w"> </span><span class="se">\</span>
+<span class="w">     </span>-d<span class="w"> </span><span class="s1">&#39;{</span>
+<span class="s1">       &quot;database_id&quot;: &quot;a1b2c3d4e5f6g7h8i9j0k1l2&quot;,</span>
+<span class="s1">       &quot;records&quot;: [</span>
+<span class="s1">         {</span>
+<span class="s1">           &quot;Name&quot;: &quot;Project Alpha&quot;,</span>
+<span class="s1">           &quot;Status&quot;: &quot;In Progress&quot;,</span>
+<span class="s1">           &quot;Priority&quot;: &quot;High&quot;,</span>
+<span class="s1">           &quot;Due Date&quot;: &quot;2024-01-15&quot;</span>
+<span class="s1">         },</span>
+<span class="s1">         {</span>
+<span class="s1">           &quot;Name&quot;: &quot;Project Beta&quot;, </span>
+<span class="s1">           &quot;Status&quot;: &quot;Planning&quot;,</span>
+<span class="s1">           &quot;Priority&quot;: &quot;Medium&quot;,</span>
+<span class="s1">           &quot;Due Date&quot;: &quot;2024-02-01&quot;</span>
+<span class="s1">         }</span>
+<span class="s1">       ]</span>
+<span class="s1">     }&#39;</span>
+</code></pre></div>
+<p><strong>Example Response:</strong></p>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;success&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;total&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;successful&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;failed&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;results&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">      </span><span class="nt">&quot;index&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;success&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;page_id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;page-id-1&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;data&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nt">&quot;Name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Project Alpha&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;Status&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;In Progress&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;Priority&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;High&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;Due Date&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2024-01-15&quot;</span>
+<span class="w">      </span><span class="p">}</span>
+<span class="w">    </span><span class="p">},</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">      </span><span class="nt">&quot;index&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;success&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;page_id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;page-id-2&quot;</span><span class="p">,</span><span class="w"> </span>
+<span class="w">      </span><span class="nt">&quot;data&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nt">&quot;Name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Project Beta&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;Status&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Planning&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;Priority&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Medium&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;Due Date&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2024-02-01&quot;</span>
+<span class="w">      </span><span class="p">}</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">  </span><span class="p">],</span>
+<span class="w">  </span><span class="nt">&quot;failed_data&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[],</span>
+<span class="w">  </span><span class="nt">&quot;error_message&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;&quot;</span>
+<span class="p">}</span>
+</code></pre></div>
+<h3 id="bulk-update-records">Bulk Update Records<a class="headerlink" href="#bulk-update-records" title="Permanent link">&para;</a></h3>
+<p>Updates multiple existing Notion pages.</p>
+<h4 id="post-apiv1notionbulk-update">POST <code>/api/v1/notion/bulk-update</code><a class="headerlink" href="#post-apiv1notionbulk-update" title="Permanent link">&para;</a></h4>
+<p><strong>Request Headers:</strong>
+<div class="highlight"><pre><span></span><code>X-API-KEY: your-api-key
+X-Notion-Token: your-notion-integration-token
+Content-Type: application/json
+</code></pre></div></p>
+<p><strong>Request Body:</strong></p>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;records&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">      </span><span class="nt">&quot;page_id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;page-id-1&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;Status&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Completed&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;Priority&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Low&quot;</span>
+<span class="w">    </span><span class="p">},</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">      </span><span class="nt">&quot;page_id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;page-id-2&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;Status&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;In Progress&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;Notes&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Updated with new requirements&quot;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">  </span><span class="p">]</span>
+<span class="p">}</span>
+</code></pre></div>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Type</th>
+<th>Required</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>records</td>
+<td>Array</td>
+<td>Yes</td>
+<td>Array of update records (max 100)</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Example Request:</strong></p>
+<div class="highlight"><pre><span></span><code>curl<span class="w"> </span>-X<span class="w"> </span>POST<span class="w"> </span><span class="s2">&quot;https://magic-meal-kits-xxxxx.run.app/api/v1/notion/bulk-update&quot;</span><span class="w"> </span><span class="se">\</span>
+<span class="w">     </span>-H<span class="w"> </span><span class="s2">&quot;X-API-KEY: your-api-key&quot;</span><span class="w"> </span><span class="se">\</span>
+<span class="w">     </span>-H<span class="w"> </span><span class="s2">&quot;X-Notion-Token: your-notion-integration-token&quot;</span><span class="w"> </span><span class="se">\</span>
+<span class="w">     </span>-H<span class="w"> </span><span class="s2">&quot;Content-Type: application/json&quot;</span><span class="w"> </span><span class="se">\</span>
+<span class="w">     </span>-d<span class="w"> </span><span class="s1">&#39;{</span>
+<span class="s1">       &quot;records&quot;: [</span>
+<span class="s1">         {</span>
+<span class="s1">           &quot;page_id&quot;: &quot;a1b2c3d4e5f6g7h8i9j0k1l2&quot;,</span>
+<span class="s1">           &quot;Status&quot;: &quot;Completed&quot;,</span>
+<span class="s1">           &quot;Completion Date&quot;: &quot;2024-01-10&quot;</span>
+<span class="s1">         }</span>
+<span class="s1">       ]</span>
+<span class="s1">     }&#39;</span>
+</code></pre></div>
+<p><strong>Example Response:</strong></p>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;success&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;total&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;successful&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;failed&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;results&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">      </span><span class="nt">&quot;index&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;success&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;page_id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;a1b2c3d4e5f6g7h8i9j0k1l2&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;data&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nt">&quot;Status&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Completed&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;Completion Date&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2024-01-10&quot;</span>
+<span class="w">      </span><span class="p">}</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">  </span><span class="p">],</span>
+<span class="w">  </span><span class="nt">&quot;failed_data&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[],</span>
+<span class="w">  </span><span class="nt">&quot;error_message&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;&quot;</span>
+<span class="p">}</span>
+</code></pre></div>
+<h3 id="bulk-delete-records">Bulk Delete Records<a class="headerlink" href="#bulk-delete-records" title="Permanent link">&para;</a></h3>
+<p>Moves multiple Notion pages to trash.</p>
+<h4 id="post-apiv1notionbulk-delete">POST <code>/api/v1/notion/bulk-delete</code><a class="headerlink" href="#post-apiv1notionbulk-delete" title="Permanent link">&para;</a></h4>
+<p><strong>Request Headers:</strong>
+<div class="highlight"><pre><span></span><code>X-API-KEY: your-api-key
+X-Notion-Token: your-notion-integration-token
+Content-Type: application/json
+</code></pre></div></p>
+<p><strong>Request Body:</strong></p>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;page_ids&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">    </span><span class="s2">&quot;page-id-1&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="s2">&quot;page-id-2&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="s2">&quot;page-id-3&quot;</span>
+<span class="w">  </span><span class="p">]</span>
+<span class="p">}</span>
+</code></pre></div>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Type</th>
+<th>Required</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>page_ids</td>
+<td>Array</td>
+<td>Yes</td>
+<td>Array of page IDs to delete (max 100)</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Example Request:</strong></p>
+<div class="highlight"><pre><span></span><code>curl<span class="w"> </span>-X<span class="w"> </span>POST<span class="w"> </span><span class="s2">&quot;https://magic-meal-kits-xxxxx.run.app/api/v1/notion/bulk-delete&quot;</span><span class="w"> </span><span class="se">\</span>
+<span class="w">     </span>-H<span class="w"> </span><span class="s2">&quot;X-API-KEY: your-api-key&quot;</span><span class="w"> </span><span class="se">\</span>
+<span class="w">     </span>-H<span class="w"> </span><span class="s2">&quot;X-Notion-Token: your-notion-integration-token&quot;</span><span class="w"> </span><span class="se">\</span>
+<span class="w">     </span>-H<span class="w"> </span><span class="s2">&quot;Content-Type: application/json&quot;</span><span class="w"> </span><span class="se">\</span>
+<span class="w">     </span>-d<span class="w"> </span><span class="s1">&#39;{</span>
+<span class="s1">       &quot;page_ids&quot;: [</span>
+<span class="s1">         &quot;a1b2c3d4e5f6g7h8i9j0k1l2&quot;,</span>
+<span class="s1">         &quot;b2c3d4e5f6g7h8i9j0k1l2m3&quot;</span>
+<span class="s1">       ]</span>
+<span class="s1">     }&#39;</span>
+</code></pre></div>
+<p><strong>Example Response:</strong></p>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;success&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;total&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;successful&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;failed&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;results&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">      </span><span class="nt">&quot;index&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;success&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;page_id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;a1b2c3d4e5f6g7h8i9j0k1l2&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;data&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nt">&quot;archived&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span>
+<span class="w">      </span><span class="p">}</span>
+<span class="w">    </span><span class="p">},</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">      </span><span class="nt">&quot;index&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;success&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;page_id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;b2c3d4e5f6g7h8i9j0k1l2m3&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;data&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nt">&quot;archived&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span>
+<span class="w">      </span><span class="p">}</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">  </span><span class="p">],</span>
+<span class="w">  </span><span class="nt">&quot;failed_page_ids&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[],</span>
+<span class="w">  </span><span class="nt">&quot;processing_time&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;1.2s&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;summary&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{}</span>
+<span class="p">}</span>
+</code></pre></div>
+<h2 id="error-handling">Error Handling<a class="headerlink" href="#error-handling" title="Permanent link">&para;</a></h2>
+<p>All endpoints return standardized error responses:</p>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;error&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Error message description&quot;</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>Common HTTP status codes:</p>
+<ul>
+<li><strong>200 OK</strong>: All operations successful</li>
+<li><strong>207 Multi-Status</strong>: Partial success (some operations failed)</li>
+<li><strong>400 Bad Request</strong>: Invalid request parameters or data</li>
+<li><strong>401 Unauthorized</strong>: Missing or invalid API key or Notion token</li>
+<li><strong>403 Forbidden</strong>: Insufficient permissions</li>
+<li><strong>404 Not Found</strong>: Database or page not found</li>
+<li><strong>429 Too Many Requests</strong>: Rate limit exceeded</li>
+<li><strong>500 Internal Server Error</strong>: Server-side error</li>
+</ul>
+<h2 id="data-format">Data Format<a class="headerlink" href="#data-format" title="Permanent link">&para;</a></h2>
+<p>The API automatically converts simple data formats to Notion's complex property format.</p>
+<h3 id="supported-property-types">Supported Property Types<a class="headerlink" href="#supported-property-types" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Notion Type</th>
+<th>Input Format</th>
+<th>Example Input</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>title</td>
+<td>string</td>
+<td>"Project Name"</td>
+<td>Page title field</td>
+</tr>
+<tr>
+<td>rich_text</td>
+<td>string</td>
+<td>"Description text"</td>
+<td>Rich text content</td>
+</tr>
+<tr>
+<td>number</td>
+<td>number</td>
+<td>42 or 3.14</td>
+<td>Numeric values</td>
+</tr>
+<tr>
+<td>select</td>
+<td>string</td>
+<td>"High"</td>
+<td>Single selection from options</td>
+</tr>
+<tr>
+<td>multi_select</td>
+<td>array/string</td>
+<td>["Tag1", "Tag2"] or "Tag1, Tag2"</td>
+<td>Multiple selections</td>
+</tr>
+<tr>
+<td>date</td>
+<td>string</td>
+<td>"2024-01-15"</td>
+<td>Date in YYYY-MM-DD format</td>
+</tr>
+<tr>
+<td>checkbox</td>
+<td>boolean</td>
+<td>true/false</td>
+<td>Checkbox state</td>
+</tr>
+<tr>
+<td>email</td>
+<td>string</td>
+<td>"user@example.com"</td>
+<td>Email address</td>
+</tr>
+<tr>
+<td>phone_number</td>
+<td>string</td>
+<td>"+1-555-123-4567"</td>
+<td>Phone number</td>
+</tr>
+<tr>
+<td>url</td>
+<td>string</td>
+<td>"https://example.com"</td>
+<td>Website URL</td>
+</tr>
+<tr>
+<td>relation</td>
+<td>array/string</td>
+<td>["page-id-1", "page-id-2"] or "page-id-1,page-id-2"</td>
+<td>Related page IDs</td>
+</tr>
+<tr>
+<td>status</td>
+<td>string</td>
+<td>"In Progress"</td>
+<td>Status from available options</td>
+</tr>
+</tbody>
+</table>
+<h3 id="field-type-examples">Field Type Examples<a class="headerlink" href="#field-type-examples" title="Permanent link">&para;</a></h3>
+<h4 id="title-fields">Title Fields<a class="headerlink" href="#title-fields" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;Name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Project Alpha&quot;</span>
+<span class="p">}</span>
+</code></pre></div>
+<h4 id="rich-text-fields">Rich Text Fields<a class="headerlink" href="#rich-text-fields" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;Description&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;This is a detailed description of the project&quot;</span>
+<span class="p">}</span>
+</code></pre></div>
+<h4 id="number-fields">Number Fields<a class="headerlink" href="#number-fields" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;Priority&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;Budget&quot;</span><span class="p">:</span><span class="w"> </span><span class="mf">5000.50</span>
+<span class="p">}</span>
+</code></pre></div>
+<h4 id="select-fields">Select Fields<a class="headerlink" href="#select-fields" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;Status&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;In Progress&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;Priority&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;High&quot;</span>
+<span class="p">}</span>
+</code></pre></div>
+<h4 id="multi-select-fields">Multi-select Fields<a class="headerlink" href="#multi-select-fields" title="Permanent link">&para;</a></h4>
+<p><div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;Tags&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;Frontend&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;Backend&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;Database&quot;</span><span class="p">]</span>
+<span class="p">}</span>
+</code></pre></div>
+or
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;Tags&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Frontend, Backend, Database&quot;</span>
+<span class="p">}</span>
+</code></pre></div></p>
+<h4 id="date-fields">Date Fields<a class="headerlink" href="#date-fields" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;Due Date&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2024-01-15&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;Start Date&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2024-01-01&quot;</span>
+<span class="p">}</span>
+</code></pre></div>
+<h4 id="checkbox-fields">Checkbox Fields<a class="headerlink" href="#checkbox-fields" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;Completed&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;Archived&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span>
+<span class="p">}</span>
+</code></pre></div>
+<h4 id="email-fields">Email Fields<a class="headerlink" href="#email-fields" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;Contact Email&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;user@example.com&quot;</span>
+<span class="p">}</span>
+</code></pre></div>
+<h4 id="phone-number-fields">Phone Number Fields<a class="headerlink" href="#phone-number-fields" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;Phone&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;+1-555-123-4567&quot;</span>
+<span class="p">}</span>
+</code></pre></div>
+<h4 id="url-fields">URL Fields<a class="headerlink" href="#url-fields" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;Website&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;https://example.com&quot;</span>
+<span class="p">}</span>
+</code></pre></div>
+<h4 id="relation-fields">Relation Fields<a class="headerlink" href="#relation-fields" title="Permanent link">&para;</a></h4>
+<p><div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;Related Projects&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;page-id-1&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;page-id-2&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;page-id-3&quot;</span><span class="p">]</span>
+<span class="p">}</span>
+</code></pre></div>
+or
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;Related Projects&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;page-id-1,page-id-2,page-id-3&quot;</span>
+<span class="p">}</span>
+</code></pre></div></p>
+<h4 id="status-fields">Status Fields<a class="headerlink" href="#status-fields" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;Project Status&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;In Progress&quot;</span>
+<span class="p">}</span>
+</code></pre></div>
+<h2 id="best-practices">Best Practices<a class="headerlink" href="#best-practices" title="Permanent link">&para;</a></h2>
+<ol>
+<li><strong>Batch Size</strong>: Keep batch sizes reasonable (10-50 records) for optimal performance</li>
+<li><strong>Error Handling</strong>: Always check the response for partial failures</li>
+<li><strong>Rate Limits</strong>: The API handles rate limiting automatically, but avoid overwhelming requests</li>
+<li><strong>Data Validation</strong>: Validate your data against the database schema before sending</li>
+</ol>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        
+<div class="md-social">
+  
+    
+    
+    
+    
+    <a href="https://make.magicmealkits.com/" target="_blank" rel="noopener" title="Magic Meal Kits Service" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M351.9 280H161c2.9 64.5 17.2 123.9 37.5 167.4 11.4 24.5 23.7 41.8 35.1 52.4 11.2 10.5 18.9 12.2 22.9 12.2s11.7-1.7 22.9-12.2c11.4-10.6 23.7-28 35.1-52.4 20.3-43.5 34.6-102.9 37.5-167.4zm-191-48h190.9c-2.8-64.5-17.1-123.9-37.4-167.4-11.4-24.4-23.7-41.8-35.1-52.4C268.1 1.7 260.4 0 256.4 0s-11.7 1.7-22.9 12.2c-11.4 10.6-23.7 28-35.1 52.4-20.3 43.5-34.6 102.9-37.5 167.4m-48 0c3.5-85.6 25.6-165.1 57.9-217.3C78.7 47.3 10.9 131.2 1.5 232zM1.5 280c9.4 100.8 77.2 184.7 169.3 217.3-32.3-52.2-54.4-131.7-57.9-217.3zm398.4 0c-3.5 85.6-25.6 165.1-57.9 217.3 92.1-32.7 159.9-116.5 169.3-217.3zm111.4-48C501.9 131.2 434.1 47.3 342 14.7c32.3 52.2 54.4 131.7 57.9 217.3z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.sections", "navigation.expand", "content.code.copy"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+    
+  </body>
+</html>
