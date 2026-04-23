@@ -1,0 +1,1671 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="API documentation for Magic Meal Kits">
+      
+      
+        <meta name="author" content="푸르공">
+      
+      
+        <link rel="canonical" href="https://docs.magicmealkits.com/api/notion-ai-summary/">
+      
+      
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+    
+    
+      
+        <title>Notion AI Summary API - Magic Meal Kits API Documentation</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="black" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#notion-ai-summary-api" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Magic Meal Kits API Documentation" class="md-header__button md-logo" aria-label="Magic Meal Kits API Documentation" data-md-component="logo">
+      
+  <img src="../../assets/images/logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Magic Meal Kits API Documentation
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Notion AI Summary API
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../" class="md-tabs__link">
+          
+  
+  
+  API Reference
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../mcp/overview.md" class="md-tabs__link">
+          
+  
+  
+  MCP Server
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="https://make.magicmealkits.com/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Magic Meal Kits
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Magic Meal Kits API Documentation" class="md-nav__button md-logo" aria-label="Magic Meal Kits API Documentation" data-md-component="logo">
+      
+  <img src="../../assets/images/logo.png" alt="logo">
+
+    </a>
+    Magic Meal Kits API Documentation
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    API Reference
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    API Reference
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Overview
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../pdf/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    PDF API
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../javascript/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    JavaScript API
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../youtube/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    YouTube API
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../notion/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Notion API
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../notion-bulk-operations/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Notion Bulk Operations API
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../slack/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Slack API
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../proxy/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Proxy Image API
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../naver-commerce/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Naver Commerce API
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    MCP Server
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    MCP Server
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../mcp/overview.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Overview
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../mcp/claude-ai-setup.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Claude.ai Setup
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../mcp/claude-code-setup.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Claude Code Setup
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://make.magicmealkits.com/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Magic Meal Kits
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#authentication" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Authentication
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Authentication">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#headers" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Headers
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#license-requirement" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        License Requirement
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#array-input-formats" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Array Input Formats
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#endpoints" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Endpoints
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Endpoints">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#auto-ai-summary-recommended" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Auto AI Summary (Recommended)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Auto AI Summary (Recommended)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#post-apiv2notiondatabasedatabase_idai-summary-auto" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        POST /api/v2/notion/database/:database_id/ai-summary-auto
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#manual-ai-summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Manual AI Summary
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Manual AI Summary">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#post-apiv2notiondatabasedatabase_idai-summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        POST /api/v2/notion/database/:database_id/ai-summary
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-it-works" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        How It Works
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="How It Works">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ai-property-discovery-auto-endpoint-only" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        AI Property Discovery (Auto endpoint only)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#response-structure" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Response Structure
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Response Structure">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#aisummaryresult" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        AISummaryResult
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#http-status-codes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        HTTP Status Codes
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#limits-and-considerations" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Limits and Considerations
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#error-handling" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Error Handling
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#use-cases" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Use Cases
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Use Cases">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#trigger-ai-summary-after-bulk-insert" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Trigger AI Summary After Bulk Insert
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#makecom-integration" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Make.com Integration
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="notion-ai-summary-api">Notion AI Summary API<a class="headerlink" href="#notion-ai-summary-api" title="Permanent link">&para;</a></h1>
+<p>The Notion AI Summary API triggers Notion's built-in AI to generate summaries for database properties that have AI autofill configured. It uses Notion's internal (unofficial) API to discover AI properties, run inference, and save results back to the page.</p>
+<h2 id="authentication">Authentication<a class="headerlink" href="#authentication" title="Permanent link">&para;</a></h2>
+<p>Only the API key is required. All Notion credentials are resolved server-side from Secret Manager.</p>
+<div class="highlight"><pre><span></span><code>curl<span class="w"> </span>-X<span class="w"> </span>POST<span class="w"> </span><span class="s2">&quot;https://magic-meal-kits-xxxxx.run.app/api/v2/notion/database/&lt;database_id&gt;/ai-summary-auto&quot;</span><span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>-H<span class="w"> </span><span class="s2">&quot;X-API-Key: your-mmk-api-key&quot;</span><span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>-H<span class="w"> </span><span class="s2">&quot;Content-Type: application/json&quot;</span><span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>-d<span class="w"> </span><span class="s1">&#39;{ &quot;page_ids&quot;: [&quot;page-uuid-1&quot;] }&#39;</span>
+</code></pre></div>
+<h3 id="headers">Headers<a class="headerlink" href="#headers" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Header</th>
+<th>Required</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>X-API-Key</code> or <code>Authorization: Bearer</code></td>
+<td>Yes</td>
+<td>Magic Meal Kits API key</td>
+</tr>
+<tr>
+<td><code>X-Notion-Token</code></td>
+<td>No</td>
+<td>Notion session token (<code>token_v2</code>). Auto-resolved from Secret Manager if missing</td>
+</tr>
+<tr>
+<td><code>X-Notion-User-ID</code></td>
+<td>No</td>
+<td>Notion user ID. Auto-resolved from Secret Manager if missing</td>
+</tr>
+<tr>
+<td><code>X-Notion-Space-ID</code></td>
+<td>No</td>
+<td>Notion workspace (space) ID. Auto-resolved from Secret Manager if missing</td>
+</tr>
+<tr>
+<td><code>X-Notion-Official-Token</code></td>
+<td>No</td>
+<td>Official Notion API token. Auto-resolved from Secret Manager if missing. When available, Step 3 (save summary) uses the official API (<code>PATCH /v1/pages</code>) instead of the unofficial <code>saveTransactionsFanout</code> API</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><strong>Note:</strong> If you provide any <code>X-Notion-*</code> headers explicitly, they take priority over Secret Manager values. This allows MCP/browser clients to pass credentials directly while API clients can omit them entirely.</p>
+</blockquote>
+<h2 id="license-requirement">License Requirement<a class="headerlink" href="#license-requirement" title="Permanent link">&para;</a></h2>
+<p>All AI Summary endpoints require a <strong>Pro</strong> license (<code>license.RequirePro()</code>).</p>
+<h2 id="array-input-formats">Array Input Formats<a class="headerlink" href="#array-input-formats" title="Permanent link">&para;</a></h2>
+<p>All array fields (<code>page_ids</code>, <code>property_ids</code>) accept two formats:</p>
+<p><strong>Format 1: Simple string array</strong> (standard)
+<div class="highlight"><pre><span></span><code><span class="p">{</span><span class="w"> </span><span class="nt">&quot;page_ids&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;uuid-1&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;uuid-2&quot;</span><span class="p">]</span><span class="w"> </span><span class="p">}</span>
+</code></pre></div></p>
+<p><strong>Format 2: Object array</strong> (Make.com friendly)
+<div class="highlight"><pre><span></span><code><span class="p">{</span><span class="w"> </span><span class="nt">&quot;page_ids&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[{</span><span class="nt">&quot;page_id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;uuid-1&quot;</span><span class="p">},</span><span class="w"> </span><span class="p">{</span><span class="nt">&quot;page_id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;uuid-2&quot;</span><span class="p">}]</span><span class="w"> </span><span class="p">}</span>
+</code></pre></div></p>
+<p>Both formats are fully supported and can be used interchangeably. The object array format is particularly useful for Make.com scenarios where arrays are naturally represented as collections.</p>
+<h2 id="endpoints">Endpoints<a class="headerlink" href="#endpoints" title="Permanent link">&para;</a></h2>
+<h3 id="auto-ai-summary-recommended">Auto AI Summary (Recommended)<a class="headerlink" href="#auto-ai-summary-recommended" title="Permanent link">&para;</a></h3>
+<p>Auto-discovers all AI-configured properties in the database, then triggers AI summary for each discovered property across all provided pages.</p>
+<h4 id="post-apiv2notiondatabasedatabase_idai-summary-auto">POST <code>/api/v2/notion/database/:database_id/ai-summary-auto</code><a class="headerlink" href="#post-apiv2notiondatabasedatabase_idai-summary-auto" title="Permanent link">&para;</a></h4>
+<p><strong>URL Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Required</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>database_id</td>
+<td>String</td>
+<td>Yes</td>
+<td>Notion database ID or URL</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Request Body:</strong></p>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;page_ids&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;page-uuid-1&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;page-uuid-2&quot;</span><span class="p">],</span>
+<span class="w">  </span><span class="nt">&quot;page_id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;database-page-uuid&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;property_ids&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;property-id-1&quot;</span><span class="p">]</span>
+<span class="p">}</span>
+</code></pre></div>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Type</th>
+<th>Required</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>page_ids</td>
+<td>String[] or Object[]</td>
+<td>Yes</td>
+<td>Array of page IDs to process (max 10 per call)</td>
+</tr>
+<tr>
+<td>page_id</td>
+<td>String</td>
+<td>No</td>
+<td>Page ID for <code>loadPageChunk</code>. Use when the database is inline — provide the parent page ID</td>
+</tr>
+<tr>
+<td>property_ids</td>
+<td>String[] or Object[]</td>
+<td>No</td>
+<td>Filter to specific AI property IDs. If omitted, all discovered AI properties are processed</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Example Request:</strong></p>
+<div class="highlight"><pre><span></span><code>curl<span class="w"> </span>-X<span class="w"> </span>POST<span class="w"> </span><span class="s2">&quot;https://magic-meal-kits-xxxxx.run.app/api/v2/notion/database/a1b2c3d4-e5f6-7890-abcd-ef1234567890/ai-summary-auto&quot;</span><span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>-H<span class="w"> </span><span class="s2">&quot;X-API-Key: your-mmk-api-key&quot;</span><span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>-H<span class="w"> </span><span class="s2">&quot;Content-Type: application/json&quot;</span><span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>-d<span class="w"> </span><span class="s1">&#39;{</span>
+<span class="s1">    &quot;page_ids&quot;: [</span>
+<span class="s1">      &quot;11111111-2222-3333-4444-555555555555&quot;,</span>
+<span class="s1">      &quot;aaaaaaaa-bbbb-cccc-dddd-eeeeeeeeeeee&quot;</span>
+<span class="s1">    ]</span>
+<span class="s1">  }&#39;</span>
+</code></pre></div>
+<p><strong>Example Response (200 OK — all succeeded):</strong></p>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;success&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;total&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;successful&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;failed&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;results&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">      </span><span class="nt">&quot;page_id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;11111111-2222-3333-4444-555555555555&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;success&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;summary&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;This page discusses project milestones and quarterly goals...&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;property_id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;B\\i_&quot;</span>
+<span class="w">    </span><span class="p">},</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">      </span><span class="nt">&quot;page_id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;aaaaaaaa-bbbb-cccc-dddd-eeeeeeeeeeee&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;success&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;summary&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;A comprehensive analysis of customer feedback from Q4...&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;property_id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;B\\i_&quot;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">  </span><span class="p">]</span>
+<span class="p">}</span>
+</code></pre></div>
+<p><strong>Example Response (207 Multi-Status — partial success):</strong></p>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;success&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;total&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">4</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;successful&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;failed&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;results&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">      </span><span class="nt">&quot;page_id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;11111111-2222-3333-4444-555555555555&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;success&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;summary&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Generated summary text...&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;property_id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;B\\i_&quot;</span>
+<span class="w">    </span><span class="p">},</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">      </span><span class="nt">&quot;page_id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;aaaaaaaa-bbbb-cccc-dddd-eeeeeeeeeeee&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;success&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;error&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;step 2 (getCompletionForProperty) failed: timeout&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;property_id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;B\\i_&quot;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">  </span><span class="p">]</span>
+<span class="p">}</span>
+</code></pre></div>
+<blockquote>
+<p><strong>Note:</strong> When a database has multiple AI properties, results are flattened — each page+property combination is a separate result entry.</p>
+</blockquote>
+<hr />
+<h3 id="manual-ai-summary">Manual AI Summary<a class="headerlink" href="#manual-ai-summary" title="Permanent link">&para;</a></h3>
+<p>Triggers AI summary for a <strong>specific</strong> property and workflow. Use this when you already know the <code>property_id</code> and <code>workflow_id</code>.</p>
+<h4 id="post-apiv2notiondatabasedatabase_idai-summary">POST <code>/api/v2/notion/database/:database_id/ai-summary</code><a class="headerlink" href="#post-apiv2notiondatabasedatabase_idai-summary" title="Permanent link">&para;</a></h4>
+<p><strong>URL Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Required</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>database_id</td>
+<td>String</td>
+<td>Yes</td>
+<td>Notion database ID or URL</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Request Body:</strong></p>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;page_ids&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;page-uuid-1&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;page-uuid-2&quot;</span><span class="p">],</span>
+<span class="w">  </span><span class="nt">&quot;property_id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;B\\i_&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;workflow_id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;optional-workflow-id&quot;</span>
+<span class="p">}</span>
+</code></pre></div>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Type</th>
+<th>Required</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>page_ids</td>
+<td>String[] or Object[]</td>
+<td>Yes</td>
+<td>Array of page IDs to process</td>
+</tr>
+<tr>
+<td>property_id</td>
+<td>String</td>
+<td>Yes</td>
+<td>The AI property ID (URL-encoded values like <code>B%5Ci_</code> are auto-decoded)</td>
+</tr>
+<tr>
+<td>workflow_id</td>
+<td>String</td>
+<td>No</td>
+<td>Notion AI workflow ID. If omitted, the default is used</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Example Request:</strong></p>
+<div class="highlight"><pre><span></span><code>curl<span class="w"> </span>-X<span class="w"> </span>POST<span class="w"> </span><span class="s2">&quot;https://magic-meal-kits-xxxxx.run.app/api/v2/notion/database/a1b2c3d4-e5f6-7890-abcd-ef1234567890/ai-summary&quot;</span><span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>-H<span class="w"> </span><span class="s2">&quot;X-API-Key: your-mmk-api-key&quot;</span><span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>-H<span class="w"> </span><span class="s2">&quot;Content-Type: application/json&quot;</span><span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>-d<span class="w"> </span><span class="s1">&#39;{</span>
+<span class="s1">    &quot;page_ids&quot;: [&quot;11111111-2222-3333-4444-555555555555&quot;],</span>
+<span class="s1">    &quot;property_id&quot;: &quot;B%5Ci_&quot;,</span>
+<span class="s1">    &quot;workflow_id&quot;: &quot;wf-abc123&quot;</span>
+<span class="s1">  }&#39;</span>
+</code></pre></div>
+<p><strong>Example Response:</strong></p>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;success&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;total&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;successful&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;failed&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;results&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">      </span><span class="nt">&quot;page_id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;11111111-2222-3333-4444-555555555555&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;success&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;summary&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Generated summary text...&quot;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">  </span><span class="p">]</span>
+<span class="p">}</span>
+</code></pre></div>
+<hr />
+<h2 id="how-it-works">How It Works<a class="headerlink" href="#how-it-works" title="Permanent link">&para;</a></h2>
+<p>The AI summary flow has 3 steps, executed sequentially for each page:</p>
+<div class="highlight"><pre><span></span><code>┌──────────────────────────────────────────────────────────────────┐
+│  Auto endpoint only: loadPageChunk → discover AI properties      │
+│  (properties with ai_inference config + migrated_workflow_id)    │
+└──────────────────────────┬───────────────────────────────────────┘
+                           │
+              For each page × property:
+                           │
+                           ▼
+┌──────────────────────────────────────────────────────────────────┐
+│  Step 1: publishAiSession                                        │
+│  POST /api/v3/publishAiSession (Notion internal API)             │
+│  Creates an AI session with block pointer + inference config     │
+│  Typically completes in &lt; 1 second                               │
+└──────────────────────────┬───────────────────────────────────────┘
+                           │
+                           ▼
+┌──────────────────────────────────────────────────────────────────┐
+│  Step 2: getCompletionForProperty                                │
+│  POST /api/v3/getCompletionForProperty (Notion internal API)     │
+│  Returns NDJSON stream of tokens                                 │
+│  Parses lines with type=&quot;success&quot; and concatenates completion    │
+│  ⚠️  This step can take 30–120 seconds                           │
+└──────────────────────────┬───────────────────────────────────────┘
+                           │
+                           ▼
+┌──────────────────────────────────────────────────────────────────┐
+│  Step 3: saveSummary                                             │
+│  If official token available (header or Secret Manager):         │
+│    → PATCH /v1/pages/{page_id} (official Notion API)             │
+│  Else:                                                           │
+│    → POST /api/v3/saveTransactionsFanout (unofficial API)        │
+│  Writes generated summary back to the page property              │
+└──────────────────────────────────────────────────────────────────┘
+</code></pre></div>
+<h3 id="ai-property-discovery-auto-endpoint-only">AI Property Discovery (Auto endpoint only)<a class="headerlink" href="#ai-property-discovery-auto-endpoint-only" title="Permanent link">&para;</a></h3>
+<p>The auto endpoint calls Notion's <code>loadPageChunk</code> API on the database to inspect the collection schema. It looks for properties that have <code>ai_inference</code> configuration:</p>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;schema&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nt">&quot;B\\i_&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;AI Summary&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;text&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;ai_inference&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;summarize&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;is_migrated&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;migrated_workflow_id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;wf-abc123&quot;</span>
+<span class="w">      </span><span class="p">}</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>Only properties with <code>ai_inference</code> present are discovered and processed.</p>
+<h2 id="response-structure">Response Structure<a class="headerlink" href="#response-structure" title="Permanent link">&para;</a></h2>
+<p>Both endpoints share the same response format:</p>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;success&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;total&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;successful&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;failed&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;results&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">      </span><span class="nt">&quot;page_id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;uuid&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;success&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;summary&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Generated text...&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;property_id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;prop_id&quot;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">  </span><span class="p">]</span>
+<span class="p">}</span>
+</code></pre></div>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>success</td>
+<td>Boolean</td>
+<td><code>true</code> if all operations succeeded</td>
+</tr>
+<tr>
+<td>total</td>
+<td>Integer</td>
+<td>Total number of page×property operations</td>
+</tr>
+<tr>
+<td>successful</td>
+<td>Integer</td>
+<td>Number of successful operations</td>
+</tr>
+<tr>
+<td>failed</td>
+<td>Integer</td>
+<td>Number of failed operations</td>
+</tr>
+<tr>
+<td>results</td>
+<td>AISummaryResult[]</td>
+<td>Per-page-property results</td>
+</tr>
+</tbody>
+</table>
+<h3 id="aisummaryresult">AISummaryResult<a class="headerlink" href="#aisummaryresult" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>page_id</td>
+<td>String</td>
+<td>The page that was processed</td>
+</tr>
+<tr>
+<td>success</td>
+<td>Boolean</td>
+<td>Whether this specific operation succeeded</td>
+</tr>
+<tr>
+<td>summary</td>
+<td>String</td>
+<td>The generated AI summary text (on success)</td>
+</tr>
+<tr>
+<td>error</td>
+<td>String</td>
+<td>Error description (on failure)</td>
+</tr>
+<tr>
+<td>property_id</td>
+<td>String</td>
+<td>The AI property ID (present in auto endpoint results)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="http-status-codes">HTTP Status Codes<a class="headerlink" href="#http-status-codes" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Status</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>200</td>
+<td>All operations succeeded</td>
+</tr>
+<tr>
+<td>207</td>
+<td>Partial success — some operations failed, some succeeded</td>
+</tr>
+<tr>
+<td>400</td>
+<td>All operations failed, or invalid request</td>
+</tr>
+</tbody>
+</table>
+<h2 id="limits-and-considerations">Limits and Considerations<a class="headerlink" href="#limits-and-considerations" title="Permanent link">&para;</a></h2>
+<ul>
+<li><strong>Max 10 pages per call</strong> (auto endpoint)</li>
+<li><strong>Step 2 can take 30–120 seconds</strong> per page — plan for long timeouts</li>
+<li><strong>Sequential processing</strong> — pages are processed one at a time, not in parallel</li>
+<li><strong>Notion AI must be enabled</strong> — the database must have AI properties configured in Notion</li>
+<li><strong>Inline databases</strong> — if the database is inline (embedded in a page), provide the <code>page_id</code> of the parent page so <code>loadPageChunk</code> can find the collection schema</li>
+</ul>
+<h2 id="error-handling">Error Handling<a class="headerlink" href="#error-handling" title="Permanent link">&para;</a></h2>
+<p>Errors follow the standard format:</p>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;error&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Missing required Notion credentials (not found in headers or Secret Manager)&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;required&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;X-Notion-Token&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;X-Notion-User-ID&quot;</span><span class="p">]</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>Common errors:</p>
+<table>
+<thead>
+<tr>
+<th>Error</th>
+<th>Cause</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>Missing required Notion credentials</code></td>
+<td>Token/UserID not in headers and not in Secret Manager</td>
+</tr>
+<tr>
+<td><code>X-Notion-Space-ID is required</code></td>
+<td>Space ID not found in headers or Secret Manager</td>
+</tr>
+<tr>
+<td><code>Maximum 10 pages per call</code></td>
+<td>Too many page_ids in request</td>
+</tr>
+<tr>
+<td><code>Failed to detect AI properties</code></td>
+<td>loadPageChunk failed — check page_id or credentials</td>
+</tr>
+<tr>
+<td><code>step 1 (publishAiSession) failed</code></td>
+<td>Notion session creation failed</td>
+</tr>
+<tr>
+<td><code>step 2 (getCompletionForProperty) failed</code></td>
+<td>AI inference timed out or returned error</td>
+</tr>
+<tr>
+<td><code>step 2 returned empty summary</code></td>
+<td>Notion AI returned no content</td>
+</tr>
+<tr>
+<td><code>step 3 (saveSummary) failed</code></td>
+<td>Failed to write summary back to the page</td>
+</tr>
+</tbody>
+</table>
+<h2 id="use-cases">Use Cases<a class="headerlink" href="#use-cases" title="Permanent link">&para;</a></h2>
+<h3 id="trigger-ai-summary-after-bulk-insert">Trigger AI Summary After Bulk Insert<a class="headerlink" href="#trigger-ai-summary-after-bulk-insert" title="Permanent link">&para;</a></h3>
+<p>After inserting records via the <a href="../notion-bulk-operations/">Bulk Operations API</a>, trigger AI summaries for the newly created pages:</p>
+<div class="highlight"><pre><span></span><code><span class="c1"># 1. Bulk insert records</span>
+curl<span class="w"> </span>-X<span class="w"> </span>POST<span class="w"> </span><span class="s2">&quot;.../api/v1/notion/bulk-insert&quot;</span><span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>-H<span class="w"> </span><span class="s2">&quot;X-API-Key: key&quot;</span><span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>-d<span class="w"> </span><span class="s1">&#39;{&quot;database_id&quot;: &quot;db-id&quot;, &quot;records&quot;: [...]}&#39;</span>
+
+<span class="c1"># 2. Get page_ids from the bulk insert response, then trigger AI summary</span>
+curl<span class="w"> </span>-X<span class="w"> </span>POST<span class="w"> </span><span class="s2">&quot;.../api/v2/notion/database/db-id/ai-summary-auto&quot;</span><span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>-H<span class="w"> </span><span class="s2">&quot;X-API-Key: key&quot;</span><span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>-d<span class="w"> </span><span class="s1">&#39;{&quot;page_ids&quot;: [&quot;page-id-1&quot;, &quot;page-id-2&quot;]}&#39;</span>
+</code></pre></div>
+<h3 id="makecom-integration">Make.com Integration<a class="headerlink" href="#makecom-integration" title="Permanent link">&para;</a></h3>
+<p>Use the AI Summary Auto endpoint as an action step in a Make.com scenario:</p>
+<ol>
+<li>A trigger module detects new database items</li>
+<li>Collect the page IDs</li>
+<li>Call the AI Summary Auto endpoint via HTTP module</li>
+<li>All AI properties are automatically populated</li>
+</ol>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        
+<div class="md-social">
+  
+    
+    
+    
+    
+    <a href="https://make.magicmealkits.com/" target="_blank" rel="noopener" title="Magic Meal Kits Service" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M351.9 280H161c2.9 64.5 17.2 123.9 37.5 167.4 11.4 24.5 23.7 41.8 35.1 52.4 11.2 10.5 18.9 12.2 22.9 12.2s11.7-1.7 22.9-12.2c11.4-10.6 23.7-28 35.1-52.4 20.3-43.5 34.6-102.9 37.5-167.4zm-191-48h190.9c-2.8-64.5-17.1-123.9-37.4-167.4-11.4-24.4-23.7-41.8-35.1-52.4C268.1 1.7 260.4 0 256.4 0s-11.7 1.7-22.9 12.2c-11.4 10.6-23.7 28-35.1 52.4-20.3 43.5-34.6 102.9-37.5 167.4m-48 0c3.5-85.6 25.6-165.1 57.9-217.3C78.7 47.3 10.9 131.2 1.5 232zM1.5 280c9.4 100.8 77.2 184.7 169.3 217.3-32.3-52.2-54.4-131.7-57.9-217.3zm398.4 0c-3.5 85.6-25.6 165.1-57.9 217.3 92.1-32.7 159.9-116.5 169.3-217.3zm111.4-48C501.9 131.2 434.1 47.3 342 14.7c32.3 52.2 54.4 131.7 57.9 217.3z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.sections", "navigation.expand", "content.code.copy"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+    
+  </body>
+</html>
